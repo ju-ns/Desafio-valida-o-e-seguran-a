@@ -1,8 +1,10 @@
 package com.devsuperior.bds04.dto;
 
 import java.io.Serializable;
+import java.util.List;
 
 import com.devsuperior.bds04.entities.City;
+import com.devsuperior.bds04.entities.Event;
 import jakarta.validation.constraints.NotBlank;
 
 public class CityDTO implements Serializable {
@@ -25,6 +27,7 @@ public class CityDTO implements Serializable {
 		name = entity.getName();
 	}
 
+
 	public Long getId() {
 		return id;
 	}
@@ -40,4 +43,5 @@ public class CityDTO implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 }

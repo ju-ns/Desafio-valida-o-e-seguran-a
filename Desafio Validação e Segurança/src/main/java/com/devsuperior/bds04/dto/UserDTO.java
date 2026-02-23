@@ -23,12 +23,40 @@ public class UserDTO {
 
     public UserDTO(User entity){
         id = entity.getId();
-        userName = entity.getUserName();
+        userName = entity.getUsername();
         password = entity.getPassword();
     }
 
     public UserDTO(User entity, Set<Role> roles){
         this(entity);
         roles.forEach((x) -> this.roles.add(new RoleDTO(x)));
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<RoleDTO> getRoles() {
+        return roles;
     }
 }
